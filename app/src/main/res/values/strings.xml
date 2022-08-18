@@ -13,12 +13,12 @@
 
     <string name="add">+</string>
     <string name="sub">-</string>
-    <string name="mul">X</string>
+    <string name="mul">*</string>
     <string name="div">/</string>
     <string name="dot">.</string>
     <string name="clear">C</string>
-    <string name="bra">()</string>
-    <string name="backspace">>></string>
+    <string name="open">(</string>
+    <string name="close">)</string>
     <string name="equal">=</string>
     <string name="per">%</string>
     <string name="display">ENTER</string>

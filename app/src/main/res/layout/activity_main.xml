@@ -8,8 +8,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="414dp"
-        android:layout_height="486dp"
+        android:layout_width="411dp"
+        android:layout_height="432dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
                 android:textSize="34sp" />
 
             <Button
-                android:id="@+id/buttonBra"
+                android:id="@+id/buttonOpen"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -43,7 +43,20 @@
                 android:layout_weight="1"
                 android:background="@drawable/sidebtn"
                 android:gravity="center"
-                android:text="@string/bra"
+                android:text="@string/open"
+                android:textColor="#00796B"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/buttonClose"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/sidebtn"
+                android:gravity="center"
+                android:text="@string/close"
                 android:textColor="#00796B"
                 android:textSize="34sp" />
 
@@ -57,19 +70,6 @@
                 android:background="@drawable/sidebtn"
                 android:gravity="center"
                 android:text="@string/per"
-                android:textColor="#00796B"
-                android:textSize="34sp" />
-
-            <Button
-                android:id="@+id/buttonBackspace"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:background="@drawable/sidebtn"
-                android:gravity="center"
-                android:text="@string/backspace"
                 android:textColor="#00796B"
                 android:textSize="34sp" />
         </TableRow>
@@ -306,19 +306,33 @@
         </TableRow>
     </TableLayout>
 
-    <EditText
+    <TextView
         android:id="@+id/dispalyText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center|end"
         android:importantForAutofill="no"
         android:inputType="none"
-        android:text="@string/display"
+        android:text=""
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <TextView
+        android:id="@+id/dispalyResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|end"
+        android:text="0"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
+        app:layout_constraintTop_toBottomOf="@+id/dispalyText"
+        app:layout_constraintVertical_bias="0.276" />
 </androidx.constraintlayout.widget.ConstraintLayout>
